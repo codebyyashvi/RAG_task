@@ -1,0 +1,809 @@
+[
+  {
+    "doc_id": "DOC_001",
+    "title": "What is Elasticsearch?",
+    "category": "Elasticsearch",
+    "content": "Elasticsearch is a distributed search and analytics engine designed for fast full-text searches. It stores data in a structured format and allows efficient querying across large datasets. It is widely used for log analysis, monitoring, and search-driven applications.",
+    "tags": ["elasticsearch", "search", "distributed"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_002",
+    "title": "Elasticsearch Indexing Process",
+    "category": "Elasticsearch",
+    "content": "Indexing in Elasticsearch is the process of converting raw documents into a searchable structure. The data is analyzed, tokenized, and stored in an inverted index. This enables fast keyword and semantic searches.",
+    "tags": ["indexing", "elasticsearch"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_003",
+    "title": "What are Shards in Elasticsearch?",
+    "category": "Elasticsearch",
+    "content": "Shards are smaller units of an Elasticsearch index that store subsets of data. They allow Elasticsearch to distribute data across multiple nodes. This improves scalability and performance.",
+    "tags": ["shards", "scalability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_004",
+    "title": "What are Replicas in Elasticsearch?",
+    "category": "Elasticsearch",
+    "content": "Replicas are copies of primary shards used for fault tolerance and read scalability. If a primary shard fails, its replica can take over. Replicas also improve search performance by handling additional queries.",
+    "tags": ["replicas", "availability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_005",
+    "title": "Elasticsearch Query DSL",
+    "category": "Elasticsearch",
+    "content": "Elasticsearch Query DSL is a flexible JSON-based language for constructing search queries. It supports full-text search, filtering, aggregations, and relevance tuning. Query DSL enables complex search logic.",
+    "tags": ["query", "dsl"],
+    "created_at": "2025-01-01"
+  },
+
+  {
+    "doc_id": "DOC_006",
+    "title": "What is Semantic Search?",
+    "category": "Search Concepts",
+    "content": "Semantic search focuses on understanding the meaning of a query rather than matching keywords. It uses embeddings to find contextually similar documents. This improves result relevance.",
+    "tags": ["semantic search", "embeddings"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_007",
+    "title": "Keyword Search vs Semantic Search",
+    "category": "Search Concepts",
+    "content": "Keyword search matches exact terms in documents, while semantic search understands intent. Semantic search retrieves results even when wording differs. This leads to more accurate answers.",
+    "tags": ["keyword", "semantic"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_008",
+    "title": "What are Vector Embeddings?",
+    "category": "AI Concepts",
+    "content": "Vector embeddings are numerical representations of text that capture semantic meaning. Similar texts have vectors closer in space. They are essential for semantic search and RAG systems.",
+    "tags": ["vectors", "embeddings"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_009",
+    "title": "What is Vector Similarity Search?",
+    "category": "AI Concepts",
+    "content": "Vector similarity search retrieves documents based on distance metrics like cosine similarity. It is used to find semantically related content. This approach outperforms keyword search for meaning-based queries.",
+    "tags": ["vector search", "similarity"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_010",
+    "title": "Cosine Similarity Explained",
+    "category": "AI Concepts",
+    "content": "Cosine similarity measures the angle between two vectors. A higher score indicates stronger semantic similarity. It is commonly used in embedding-based search systems.",
+    "tags": ["cosine similarity", "ml"],
+    "created_at": "2025-01-01"
+  },
+
+  {
+    "doc_id": "DOC_011",
+    "title": "What is Retrieval Augmented Generation?",
+    "category": "RAG",
+    "content": "Retrieval Augmented Generation combines document retrieval with language models. Relevant documents are retrieved first and passed as context. This reduces hallucinations and improves accuracy.",
+    "tags": ["rag", "llm"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_012",
+    "title": "Why RAG is Important",
+    "category": "RAG",
+    "content": "RAG helps language models access external knowledge sources. It enables up-to-date and domain-specific responses. This makes AI systems more reliable.",
+    "tags": ["rag", "context"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_013",
+    "title": "RAG Retrieval Step",
+    "category": "RAG",
+    "content": "The retrieval step fetches relevant documents from a search system. These documents form the context for generation. Retrieval quality directly impacts final answers.",
+    "tags": ["retrieval", "rag"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_014",
+    "title": "Context Window in RAG",
+    "category": "RAG",
+    "content": "The context window defines how much retrieved information is passed to the model. Larger context improves completeness but increases cost. Proper tuning is required.",
+    "tags": ["context window", "llm"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_015",
+    "title": "Top-k Retrieval in RAG",
+    "category": "RAG",
+    "content": "Top-k retrieval selects the most relevant k documents. Choosing the right value balances relevance and noise. It is a key tuning parameter in RAG pipelines.",
+    "tags": ["top-k", "retrieval"],
+    "created_at": "2025-01-01"
+  },
+
+  {
+    "doc_id": "DOC_016",
+    "title": "What is a Large Language Model?",
+    "category": "LLM",
+    "content": "A large language model is a neural network trained on massive text data. It can generate, summarize, and answer questions. Examples include GPT and LLaMA models.",
+    "tags": ["llm", "ai"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_017",
+    "title": "Prompt Engineering Basics",
+    "category": "LLM",
+    "content": "Prompt engineering involves crafting inputs to guide model behavior. Clear prompts improve output quality. It is essential for reliable AI responses.",
+    "tags": ["prompt engineering", "llm"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_018",
+    "title": "LLM Hallucinations",
+    "category": "LLM",
+    "content": "Hallucinations occur when models generate incorrect information confidently. They arise due to lack of grounding. RAG helps reduce hallucinations.",
+    "tags": ["hallucination", "llm"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_019",
+    "title": "Token Limits in LLMs",
+    "category": "LLM",
+    "content": "Token limits define how much text an LLM can process at once. Exceeding limits truncates context. Efficient retrieval helps manage token usage.",
+    "tags": ["tokens", "context"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_020",
+    "title": "Temperature Parameter Explained",
+    "category": "LLM",
+    "content": "Temperature controls randomness in model output. Lower values make responses deterministic. Higher values increase creativity but risk inconsistency.",
+    "tags": ["temperature", "generation"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_021",
+    "title": "What is an API?",
+    "category": "System Design",
+    "content": "An API is an interface that allows different software systems to communicate with each other. It defines how requests and responses should be structured. APIs are widely used in web and cloud-based applications.",
+    "tags": ["api", "integration"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_022",
+    "title": "REST API Principles",
+    "category": "System Design",
+    "content": "REST APIs follow stateless communication and standard HTTP methods. They use resources identified by URLs. REST is popular due to its simplicity and scalability.",
+    "tags": ["rest", "http"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_023",
+    "title": "What is Latency?",
+    "category": "Performance",
+    "content": "Latency refers to the time taken for a request to receive a response. Lower latency improves user experience. It is a key metric in search and AI systems.",
+    "tags": ["latency", "performance"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_024",
+    "title": "Throughput in Distributed Systems",
+    "category": "Performance",
+    "content": "Throughput measures how many requests a system can handle in a given time. High throughput systems can process large volumes efficiently. It is often balanced against latency.",
+    "tags": ["throughput", "scalability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_025",
+    "title": "Horizontal Scaling Explained",
+    "category": "System Design",
+    "content": "Horizontal scaling involves adding more machines to handle increased load. It improves fault tolerance and scalability. Distributed systems commonly use this approach.",
+    "tags": ["scaling", "distributed"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_026",
+    "title": "Vertical Scaling Explained",
+    "category": "System Design",
+    "content": "Vertical scaling increases the capacity of a single machine. It is simpler than horizontal scaling but has hardware limits. Many systems combine both approaches.",
+    "tags": ["vertical scaling", "performance"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_027",
+    "title": "What is Fault Tolerance?",
+    "category": "Reliability",
+    "content": "Fault tolerance is the ability of a system to continue operating despite failures. It is achieved using redundancy and replication. This is critical in distributed systems.",
+    "tags": ["fault tolerance", "reliability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_028",
+    "title": "High Availability Systems",
+    "category": "Reliability",
+    "content": "High availability systems aim to minimize downtime. They use replication, monitoring, and failover mechanisms. These systems ensure continuous service access.",
+    "tags": ["availability", "uptime"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_029",
+    "title": "What is Caching?",
+    "category": "Performance",
+    "content": "Caching stores frequently accessed data in fast storage. It reduces load on backend systems. Caching improves response time and scalability.",
+    "tags": ["caching", "performance"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_030",
+    "title": "Cache Invalidation Strategies",
+    "category": "Performance",
+    "content": "Cache invalidation ensures outdated data is removed. Common strategies include time-based expiration and manual invalidation. Proper invalidation prevents stale data issues.",
+    "tags": ["cache invalidation", "consistency"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_031",
+    "title": "What is a Microservices Architecture?",
+    "category": "Architecture",
+    "content": "Microservices architecture breaks applications into independent services. Each service handles a specific function. This improves scalability and development speed.",
+    "tags": ["microservices", "architecture"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_032",
+    "title": "Monolithic Architecture Explained",
+    "category": "Architecture",
+    "content": "A monolithic architecture combines all components into a single application. It is easier to develop initially. However, scaling and maintenance can be challenging.",
+    "tags": ["monolith", "architecture"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_033",
+    "title": "What is Load Balancing?",
+    "category": "System Design",
+    "content": "Load balancing distributes traffic across multiple servers. It prevents overload on a single server. This improves reliability and performance.",
+    "tags": ["load balancing", "traffic"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_034",
+    "title": "Stateless vs Stateful Systems",
+    "category": "System Design",
+    "content": "Stateless systems do not store session information between requests. Stateful systems maintain client state. Stateless designs scale more easily.",
+    "tags": ["stateless", "stateful"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_035",
+    "title": "What is Cloud Computing?",
+    "category": "Cloud",
+    "content": "Cloud computing provides on-demand access to computing resources. It eliminates the need for physical infrastructure. Cloud platforms offer scalability and flexibility.",
+    "tags": ["cloud", "infrastructure"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_036",
+    "title": "Public vs Private Cloud",
+    "category": "Cloud",
+    "content": "Public clouds share infrastructure among users, while private clouds are dedicated. Each model has trade-offs in cost and control. Hybrid approaches are also common.",
+    "tags": ["public cloud", "private cloud"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_037",
+    "title": "What is Containerization?",
+    "category": "DevOps",
+    "content": "Containerization packages applications with dependencies. Containers run consistently across environments. Docker is a popular container platform.",
+    "tags": ["containers", "docker"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_038",
+    "title": "What is Kubernetes?",
+    "category": "DevOps",
+    "content": "Kubernetes is an orchestration platform for managing containers. It automates deployment, scaling, and management. It is widely used in cloud-native systems.",
+    "tags": ["kubernetes", "orchestration"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_039",
+    "title": "CI/CD Pipeline Explained",
+    "category": "DevOps",
+    "content": "CI/CD pipelines automate code integration and deployment. They improve software quality and delivery speed. Automation reduces human error.",
+    "tags": ["ci/cd", "automation"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_040",
+    "title": "Monitoring and Observability",
+    "category": "DevOps",
+    "content": "Monitoring tracks system health and performance. Observability provides deeper insights using logs, metrics, and traces. Both are essential for reliable systems.",
+    "tags": ["monitoring", "observability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_041",
+    "title": "What is Data Consistency?",
+    "category": "Distributed Systems",
+    "content": "Data consistency ensures that all users see the same data at the same time. In distributed systems, maintaining consistency can be challenging. Different models balance consistency and availability.",
+    "tags": ["consistency", "distributed systems"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_042",
+    "title": "CAP Theorem Explained",
+    "category": "Distributed Systems",
+    "content": "The CAP theorem states that a distributed system cannot simultaneously guarantee consistency, availability, and partition tolerance. Systems must choose two out of three. This trade-off influences system design decisions.",
+    "tags": ["cap theorem", "distributed"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_043",
+    "title": "Eventual Consistency",
+    "category": "Distributed Systems",
+    "content": "Eventual consistency allows systems to return temporary inconsistent results. Over time, all nodes converge to the same state. This model improves availability and performance.",
+    "tags": ["eventual consistency", "availability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_044",
+    "title": "What is Data Replication?",
+    "category": "Distributed Systems",
+    "content": "Data replication involves storing copies of data across multiple nodes. It improves fault tolerance and availability. Replication is commonly used in distributed databases.",
+    "tags": ["replication", "reliability"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_045",
+    "title": "What is a Message Queue?",
+    "category": "Messaging Systems",
+    "content": "A message queue enables asynchronous communication between services. Producers send messages while consumers process them independently. This improves system scalability.",
+    "tags": ["message queue", "async"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_046",
+    "title": "Kafka vs RabbitMQ",
+    "category": "Messaging Systems",
+    "content": "Kafka is designed for high-throughput event streaming, while RabbitMQ focuses on message delivery reliability. Each tool serves different use cases. Selection depends on system requirements.",
+    "tags": ["kafka", "rabbitmq"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_047",
+    "title": "What is Event-Driven Architecture?",
+    "category": "Architecture",
+    "content": "Event-driven architecture reacts to events produced by services. It promotes loose coupling and scalability. This pattern is common in modern cloud systems.",
+    "tags": ["event-driven", "architecture"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_048",
+    "title": "What is Serverless Computing?",
+    "category": "Cloud",
+    "content": "Serverless computing allows developers to run code without managing servers. The cloud provider handles scaling and infrastructure. It is cost-effective for variable workloads.",
+    "tags": ["serverless", "cloud"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_049",
+    "title": "Function as a Service Explained",
+    "category": "Cloud",
+    "content": "Function as a Service executes code in response to events. It scales automatically based on demand. FaaS is a core component of serverless platforms.",
+    "tags": ["faas", "serverless"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_050",
+    "title": "What is Infrastructure as Code?",
+    "category": "DevOps",
+    "content": "Infrastructure as Code manages infrastructure using configuration files. It enables repeatable and automated deployments. Tools like Terraform support this approach.",
+    "tags": ["iac", "automation"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_051",
+    "title": "What is Version Control?",
+    "category": "Software Engineering",
+    "content": "Version control tracks changes in source code over time. It enables collaboration and rollback. Git is the most widely used version control system.",
+    "tags": ["version control", "git"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_052",
+    "title": "Git Branching Strategy",
+    "category": "Software Engineering",
+    "content": "Branching strategies organize parallel development. Common approaches include feature branches and GitFlow. Proper branching improves collaboration and stability.",
+    "tags": ["git", "branching"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_053",
+    "title": "What is Software Testing?",
+    "category": "Software Engineering",
+    "content": "Software testing verifies that applications work as expected. It helps identify bugs early. Automated testing improves reliability and speed.",
+    "tags": ["testing", "quality"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_054",
+    "title": "Unit Testing Explained",
+    "category": "Software Engineering",
+    "content": "Unit testing focuses on individual components of code. It ensures each unit behaves correctly. Unit tests are fast and easy to automate.",
+    "tags": ["unit testing", "automation"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_055",
+    "title": "Integration Testing Explained",
+    "category": "Software Engineering",
+    "content": "Integration testing verifies interactions between components. It ensures modules work together correctly. This helps catch interface issues early.",
+    "tags": ["integration testing", "qa"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_056",
+    "title": "What is Logging?",
+    "category": "Observability",
+    "content": "Logging records events and messages from applications. Logs help diagnose issues and monitor behavior. Centralized logging improves visibility.",
+    "tags": ["logging", "debugging"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_057",
+    "title": "Metrics in Observability",
+    "category": "Observability",
+    "content": "Metrics are numerical measurements of system performance. They track values like latency and throughput. Metrics help detect anomalies.",
+    "tags": ["metrics", "monitoring"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_058",
+    "title": "Distributed Tracing Explained",
+    "category": "Observability",
+    "content": "Distributed tracing follows requests across multiple services. It helps identify bottlenecks and failures. Tracing is essential in microservices architectures.",
+    "tags": ["tracing", "microservices"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_059",
+    "title": "What is Security in Cloud Systems?",
+    "category": "Security",
+    "content": "Cloud security protects data, applications, and infrastructure. It includes identity management and encryption. Security is a shared responsibility model.",
+    "tags": ["cloud security", "protection"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_060",
+    "title": "Authentication vs Authorization",
+    "category": "Security",
+    "content": "Authentication verifies user identity, while authorization controls access to resources. Both are essential for secure systems. Proper implementation prevents unauthorized access.",
+    "tags": ["authentication", "authorization"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_061",
+    "title": "What is Encryption?",
+    "category": "Security",
+    "content": "Encryption converts readable data into an unreadable format to protect it from unauthorized access. Only authorized parties with the correct key can decrypt the data. Encryption is essential for data security.",
+    "tags": ["encryption", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_062",
+    "title": "Symmetric vs Asymmetric Encryption",
+    "category": "Security",
+    "content": "Symmetric encryption uses the same key for encryption and decryption. Asymmetric encryption uses a public and private key pair. Each approach has different performance and security characteristics.",
+    "tags": ["encryption", "cryptography"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_063",
+    "title": "What is Hashing?",
+    "category": "Security",
+    "content": "Hashing transforms data into a fixed-length value. It is a one-way process and cannot be reversed. Hashing is commonly used for password storage.",
+    "tags": ["hashing", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_064",
+    "title": "What is OAuth?",
+    "category": "Security",
+    "content": "OAuth is an authorization framework that allows third-party applications to access resources securely. It avoids sharing user credentials. OAuth is widely used for API access control.",
+    "tags": ["oauth", "authorization"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_065",
+    "title": "JSON Web Tokens Explained",
+    "category": "Security",
+    "content": "JSON Web Tokens are compact tokens used for authentication and authorization. They contain claims encoded in JSON format. JWTs are commonly used in stateless systems.",
+    "tags": ["jwt", "authentication"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_066",
+    "title": "What is Role-Based Access Control?",
+    "category": "Security",
+    "content": "Role-Based Access Control assigns permissions based on user roles. It simplifies access management. RBAC is widely used in enterprise systems.",
+    "tags": ["rbac", "access control"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_067",
+    "title": "What is Data Privacy?",
+    "category": "Security",
+    "content": "Data privacy focuses on protecting personal and sensitive information. It ensures data is collected and processed responsibly. Privacy regulations guide compliance.",
+    "tags": ["data privacy", "compliance"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_068",
+    "title": "GDPR Compliance Basics",
+    "category": "Security",
+    "content": "GDPR is a data protection regulation in the European Union. It defines rules for handling personal data. Compliance helps protect user rights.",
+    "tags": ["gdpr", "privacy"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_069",
+    "title": "What is API Security?",
+    "category": "Security",
+    "content": "API security protects interfaces from unauthorized access and attacks. It includes authentication, rate limiting, and monitoring. Secure APIs reduce system vulnerabilities.",
+    "tags": ["api security", "protection"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_070",
+    "title": "Rate Limiting Explained",
+    "category": "Security",
+    "content": "Rate limiting restricts the number of requests a client can make. It prevents abuse and denial-of-service attacks. Rate limiting improves system stability.",
+    "tags": ["rate limiting", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_071",
+    "title": "What is Threat Modeling?",
+    "category": "Security",
+    "content": "Threat modeling identifies potential security risks in a system. It helps prioritize mitigation strategies. This process improves overall system security.",
+    "tags": ["threat modeling", "risk"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_072",
+    "title": "Secure Software Development Lifecycle",
+    "category": "Security",
+    "content": "Secure SDLC integrates security practices into development stages. It helps identify vulnerabilities early. This approach reduces long-term risks.",
+    "tags": ["sdlc", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_073",
+    "title": "What is Penetration Testing?",
+    "category": "Security",
+    "content": "Penetration testing simulates attacks to identify vulnerabilities. It helps assess system defenses. Regular testing improves security posture.",
+    "tags": ["penetration testing", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_074",
+    "title": "What is Vulnerability Management?",
+    "category": "Security",
+    "content": "Vulnerability management identifies and fixes security weaknesses. It includes scanning, assessment, and remediation. Continuous management improves resilience.",
+    "tags": ["vulnerabilities", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_075",
+    "title": "What is Network Security?",
+    "category": "Security",
+    "content": "Network security protects communication channels and infrastructure. It includes firewalls and intrusion detection systems. Secure networks prevent unauthorized access.",
+    "tags": ["network security", "protection"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_076",
+    "title": "Firewall Basics",
+    "category": "Security",
+    "content": "Firewalls monitor and control network traffic. They enforce security rules based on policies. Firewalls are a core component of network security.",
+    "tags": ["firewall", "network"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_077",
+    "title": "What is Intrusion Detection?",
+    "category": "Security",
+    "content": "Intrusion detection systems monitor networks for malicious activity. They generate alerts for suspicious behavior. IDS helps improve incident response.",
+    "tags": ["ids", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_078",
+    "title": "What is Zero Trust Security?",
+    "category": "Security",
+    "content": "Zero Trust assumes no implicit trust within a network. Every request must be verified. This model reduces the risk of insider threats.",
+    "tags": ["zero trust", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_079",
+    "title": "Security Monitoring Explained",
+    "category": "Security",
+    "content": "Security monitoring continuously observes system activity. It helps detect threats early. Monitoring supports faster incident response.",
+    "tags": ["security monitoring", "detection"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_080",
+    "title": "Incident Response Process",
+    "category": "Security",
+    "content": "Incident response defines steps to handle security breaches. It includes detection, containment, and recovery. Effective response minimizes damage.",
+    "tags": ["incident response", "security"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_081",
+    "title": "What is Machine Learning?",
+    "category": "AI Concepts",
+    "content": "Machine learning enables systems to learn patterns from data without explicit programming. Models improve performance through experience. It is widely used in prediction and classification tasks.",
+    "tags": ["machine learning", "ai"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_082",
+    "title": "Supervised Learning Explained",
+    "category": "AI Concepts",
+    "content": "Supervised learning trains models using labeled data. The model learns to map inputs to known outputs. Common examples include regression and classification.",
+    "tags": ["supervised learning", "ml"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_083",
+    "title": "Unsupervised Learning Explained",
+    "category": "AI Concepts",
+    "content": "Unsupervised learning discovers patterns in unlabeled data. It is commonly used for clustering and anomaly detection. This approach reveals hidden structures in data.",
+    "tags": ["unsupervised learning", "ml"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_084",
+    "title": "What is Model Training?",
+    "category": "AI Concepts",
+    "content": "Model training involves optimizing parameters using data. The goal is to minimize error and improve accuracy. Training quality affects model performance.",
+    "tags": ["training", "models"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_085",
+    "title": "Model Evaluation Metrics",
+    "category": "AI Concepts",
+    "content": "Evaluation metrics measure model performance. Common metrics include accuracy, precision, recall, and F1-score. Proper evaluation ensures reliable models.",
+    "tags": ["evaluation", "metrics"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_086",
+    "title": "Overfitting in Machine Learning",
+    "category": "AI Concepts",
+    "content": "Overfitting occurs when a model learns noise instead of patterns. It performs well on training data but poorly on new data. Regularization helps prevent overfitting.",
+    "tags": ["overfitting", "ml"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_087",
+    "title": "Underfitting Explained",
+    "category": "AI Concepts",
+    "content": "Underfitting happens when a model is too simple to capture data patterns. It leads to poor performance on both training and test data. Increasing model complexity can help.",
+    "tags": ["underfitting", "ml"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_088",
+    "title": "What is Feature Engineering?",
+    "category": "AI Concepts",
+    "content": "Feature engineering involves selecting and transforming input variables. It improves model learning and accuracy. Good features significantly impact performance.",
+    "tags": ["features", "engineering"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_089",
+    "title": "What is Data Preprocessing?",
+    "category": "AI Concepts",
+    "content": "Data preprocessing cleans and prepares raw data for modeling. It includes normalization and handling missing values. Proper preprocessing improves results.",
+    "tags": ["preprocessing", "data"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_090",
+    "title": "What is Model Deployment?",
+    "category": "AI Concepts",
+    "content": "Model deployment makes trained models available for use. It involves integrating models into production systems. Monitoring ensures ongoing performance.",
+    "tags": ["deployment", "mlops"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_091",
+    "title": "What is MLOps?",
+    "category": "AI Concepts",
+    "content": "MLOps combines machine learning and DevOps practices. It streamlines model development and deployment. MLOps improves scalability and reliability.",
+    "tags": ["mlops", "automation"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_092",
+    "title": "Model Monitoring Explained",
+    "category": "AI Concepts",
+    "content": "Model monitoring tracks performance after deployment. It detects drift and degradation. Continuous monitoring ensures model reliability.",
+    "tags": ["monitoring", "models"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_093",
+    "title": "What is Data Drift?",
+    "category": "AI Concepts",
+    "content": "Data drift occurs when input data changes over time. It can reduce model accuracy. Detecting drift helps maintain performance.",
+    "tags": ["data drift", "ml"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_094",
+    "title": "Concept Drift Explained",
+    "category": "AI Concepts",
+    "content": "Concept drift happens when the relationship between inputs and outputs changes. Models must adapt to remain accurate. Retraining helps manage drift.",
+    "tags": ["concept drift", "ml"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_095",
+    "title": "What is AI Bias?",
+    "category": "AI Ethics",
+    "content": "AI bias occurs when models produce unfair outcomes. Bias often comes from training data. Ethical AI practices aim to reduce bias.",
+    "tags": ["bias", "ethics"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_096",
+    "title": "Explainable AI Basics",
+    "category": "AI Ethics",
+    "content": "Explainable AI helps humans understand model decisions. Transparency improves trust and accountability. It is important in regulated domains.",
+    "tags": ["explainable ai", "transparency"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_097",
+    "title": "Responsible AI Principles",
+    "category": "AI Ethics",
+    "content": "Responsible AI focuses on fairness, transparency, and accountability. It ensures AI benefits society. Ethical guidelines guide development.",
+    "tags": ["responsible ai", "ethics"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_098",
+    "title": "AI Governance Explained",
+    "category": "AI Ethics",
+    "content": "AI governance defines policies for AI usage. It ensures compliance and risk management. Governance frameworks promote responsible adoption.",
+    "tags": ["governance", "ai"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_099",
+    "title": "Future of Artificial Intelligence",
+    "category": "AI Trends",
+    "content": "The future of AI includes increased automation and intelligence. Advances will impact many industries. Responsible innovation is critical.",
+    "tags": ["ai future", "innovation"],
+    "created_at": "2025-01-01"
+  },
+  {
+    "doc_id": "DOC_100",
+    "title": "AI in Real-World Applications",
+    "category": "AI Trends",
+    "content": "AI is used in healthcare, finance, and transportation. Real-world applications improve efficiency and decision-making. Adoption continues to grow.",
+    "tags": ["applications", "ai"],
+    "created_at": "2025-01-01"
+  }
+]
+
+
+
+
