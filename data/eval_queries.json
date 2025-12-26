@@ -1,0 +1,47 @@
+[
+  {
+    "query": "Explain the Zero Trust security model",
+    "relevant_doc_ids": ["DOC_078"]
+  },
+  {
+    "query": "Explain the purpose of Elasticsearch and where it is commonly used",
+    "relevant_doc_ids": ["DOC_001"]
+  },
+  {
+    "query": "How does Elasticsearch convert raw data into a searchable format?",
+    "relevant_doc_ids": ["DOC_002"]
+  },
+  {
+    "query": "How does Elasticsearch distribute data to improve scalability?",
+    "relevant_doc_ids": ["DOC_003"]
+  },
+  {
+    "query": "How does Elasticsearch ensure fault tolerance during failures?",
+    "relevant_doc_ids": ["DOC_004"]
+  },
+  {
+    "query": "How are complex search queries constructed in Elasticsearch?",
+    "relevant_doc_ids": ["DOC_005"]
+  },
+  {
+    "query": "How does semantic search differ from traditional keyword matching?",
+    "relevant_doc_ids": ["DOC_006", "DOC_007"]
+  },
+  {
+    "query": "Why are vector embeddings important for semantic search systems?",
+    "relevant_doc_ids": ["DOC_008"]
+  },
+  {
+    "query": "How does vector similarity search retrieve related content?",
+    "relevant_doc_ids": ["DOC_009", "DOC_010"]
+  },
+  {
+    "query": "How does Retrieval Augmented Generation reduce hallucinations?",
+    "relevant_doc_ids": ["DOC_011"]
+  },
+  {
+    "query": "Why is document retrieval critical in a RAG pipeline?",
+    "relevant_doc_ids": ["DOC_012", "DOC_013"]
+  }
+]
+
