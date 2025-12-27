@@ -3,3 +3,5 @@ groq==1.0.0
 matplotlib==3.8.2
 python-dotenv==1.2.1
 tqdm==4.67.1
+requests>=2.31.0
+numpy>=1.26.0
