@@ -1,19 +1,29 @@
+import json
+import os
 import matplotlib.pyplot as plt
 
-top_k = [1, 3, 5]
-latency = [42, 55, 71]
-f1_scores = [0.62, 0.81, 0.79]
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(BASE_DIR, "data", "experiment_results.json")
+
+with open(DATA_PATH, "r") as f:
+    data = json.load(f)
+
+top_k = [d["top_k"] for d in data]
+latency = [d["avg_latency_ms"] for d in data]
+f1_scores = [d["avg_f1"] for d in data]
 
 plt.figure()
-plt.plot(top_k, latency)
+plt.plot(top_k, latency, marker="o")
 plt.xlabel("Top-K")
 plt.ylabel("Latency (ms)")
 plt.title("Latency vs Top-K")
+plt.grid(True)
 plt.show()
 
 plt.figure()
-plt.plot(top_k, f1_scores)
+plt.plot(top_k, f1_scores, marker="o")
 plt.xlabel("Top-K")
 plt.ylabel("F1 Score")
 plt.title("F1 Score vs Top-K")
+plt.grid(True)
 plt.show()

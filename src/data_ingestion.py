@@ -14,7 +14,7 @@ with open(DATA_PATH, "r", encoding="utf-8") as f:
 for doc in tqdm(documents):
     es.index(
         index=INDEX_NAME,
-        id=doc["doc_id"],   # use doc_id as ES _id
+        id=doc["doc_id"],  
         document=doc
     )
 
